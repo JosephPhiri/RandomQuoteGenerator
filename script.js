@@ -5,7 +5,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 
 // function that randomly selects a quote
-function RandomQuote() {
+function getRandomQuote() {
     var Quotez = Math.floor(Math.random() * (quotes.length));
     return quotes[Quotez];
 }
@@ -55,7 +55,7 @@ var quotes = [
 
 // print function 
 function printQuote() {
-  var QuoteSelected = RandomQuote();
+  var QuoteSelected = getRandomQuote();
   var html = '<p class="quote">' + QuoteSelected.quote + '</p>'
   + '<p class="source">' + QuoteSelected.source + '</p>';
   
